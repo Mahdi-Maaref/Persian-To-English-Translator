@@ -1,6 +1,6 @@
 # Persian-To-English-Translator
 
-![Banner](banner.png)
+![Banner](Banner.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Model: Qwen3](https://img.shields.io/badge/Base%20Model-Qwen3--0.6B-blue)](https://huggingface.co/Qwen)

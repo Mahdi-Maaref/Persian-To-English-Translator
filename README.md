@@ -4,14 +4,14 @@
 ![Banner](Banner.png)
 ### A Lightweight, Fast, and Accurate Neural Machine Translation Model
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-orange)](https://huggingface.co/)
 [![Unsloth](https://img.shields.io/badge/⚡-Unsloth-purple)](https://github.com/unslothai/unsloth)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Model: Qwen3](https://img.shields.io/badge/Base%20Model-Qwen3--0.6B-blue)](https://huggingface.co/Qwen)
 [![Framework: Unsloth](https://img.shields.io/badge/Framework-Unsloth-green)](https://github.com/unslothai/unsloth)
 [![Dataset: 300k](https://img.shields.io/badge/Dataset-300k%20Pairs-red)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ---
 
 **A fine-tuned Persian to English translation model based on Qwen3-0.6B, optimized for low-resource environments while maintaining high translation quality.**

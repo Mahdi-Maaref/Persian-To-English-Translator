@@ -1,4 +1,3 @@
-
 <div align="center">
  
 # 🌐 Persian-To-English-Translator
@@ -26,9 +25,14 @@
 [Dataset](#-dataset) •
 [License](#-license)
 
-<div align="center">
+</div>
 
-## 📖 Project Overview
+---
+
+<details>
+<summary><h2>📖 Project Overview</h2></summary>
+
+<div align="center">
 
 **Nava** (نوا) offers two specialized machine translation models designed to bridge the gap between Persian (Farsi) and English. These models are tailored for different use cases, providing a choice between extreme speed and maximum accuracy.
 
@@ -38,9 +42,7 @@
 | Ultra-fast, minimal resources | Higher accuracy, still efficient |
 | Perfect for edge devices | Perfect for quality-focused apps |
 
-
-</div>  
-</div>  
+</div>
 
 ### 🚀 Key Goals
 
@@ -49,9 +51,12 @@
 - **High Speed:** Optimized for fast inference...
 - **Accuracy:** Fine-tuned on high-quality datasets...
 
+</details>
+
 ---
 
-## 🔥 Available Models
+<details>
+<summary><h2>🔥 Available Models</h2></summary>
 
 ### Model Specifications
 
@@ -82,13 +87,17 @@ Perfect for: Professional translation, content creation,
 
 > 💡 **Note:** Even our "Pro" 4B model is remarkably lightweight compared to industry giants like GPT-4 (1.7T params) or LLaMA-70B. It's like comparing a feather to an elephant!
 
+</details>
+
 ---
 
-## 📊 Model Comparison & Benchmarks
+<details>
+<summary><h2>📊 Model Comparison & Benchmarks</h2></summary>
 
 ### 🏆 Performance Comparison: Fine-tuned vs Base Models vs Google Translate
 
-#### Quantitative Metrics
+<details>
+<summary><h4>📈 Quantitative Metrics</h4></summary>
 
 | Model | BLEU ↑ | chrF ↑ | COMET ↑ | Tokens/sec (GPU) ↑ | Tokens/sec (CPU) ↑ |
 |:------|:------:|:------:|:-------:|:------------------:|:------------------:|
@@ -100,7 +109,10 @@ Perfect for: Professional translation, content creation,
 
 > 🚧 **Note:** Comprehensive benchmarks are in progress. Results will be updated soon.
 
-#### Improvement Over Base Models
+</details>
+
+<details>
+<summary><h4>📊 Improvement Over Base Models</h4></summary>
 
 | Comparison | BLEU Improvement | chrF Improvement | Notes |
 |:-----------|:----------------:|:----------------:|:------|
@@ -109,53 +121,22 @@ Perfect for: Professional translation, content creation,
 | 🪶 Lite vs Google Translate | TBD | TBD | Offline capable! |
 | 🎯 Pro vs Google Translate | TBD | TBD | Privacy-preserving! |
 
----
+</details>
 
-### 📝 Qualitative Comparison: Translation Examples
+<details>
+<summary><h4>📝 Qualitative Comparison</h4></summary>
 
-#### Example 1: Simple Sentence
-| Source (Persian) | سلام، حال شما چطور است؟ |
-|:-----------------|:------------------------|
-| **🪶 Lite (Fine-tuned)** | Hello, how are you? |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | Hello, how are you doing? |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | Hello, how are you? |
-| **Reference** | Hello, how are you? |
+| Challenge Type | Source (Persian) | Qwen-0.6B (Base) | Google Translate | Ours (Fine-tuned) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Simple** | سلام، حال شما چطور است؟ | TBD | Hello, how are you? | Hello, how are you? |
+| **Idiomatic** | از کوزه همان برون تراود که در اوست | TBD | TBD | TBD |
+| **Formal** | در این راستا، توسعه پایدار به عنوان یکی از اهداف اصلی مورد توجه قرار گرفته است | TBD | TBD | TBD |
+| **Colloquial** | داداش این کار خیلی سخته، ولش کن بیخیال | TBD | TBD | TBD |
 
-#### Example 2: Complex/Idiomatic Sentence
-| Source (Persian) | از کوزه همان برون تراود که در اوست |
-|:-----------------|:-----------------------------------|
-| **🪶 Lite (Fine-tuned)** | TBD |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | TBD |
-| **Reference** | What's bred in the bone comes out in the flesh |
+</details>
 
-#### Example 3: Formal/Literary Text
-| Source (Persian) | در این راستا، توسعه پایدار به عنوان یکی از اهداف اصلی مورد توجه قرار گرفته است |
-|:-----------------|:-----------------------------------------------------------------------------|
-| **🪶 Lite (Fine-tuned)** | TBD |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | TBD |
-| **Reference** | In this regard, sustainable development has been considered as one of the main objectives |
-
-#### Example 4: Colloquial/Informal Text
-| Source (Persian) | داداش این کار خیلی سخته، ولش کن بیخیال |
-|:-----------------|:--------------------------------------|
-| **🪶 Lite (Fine-tuned)** | TBD |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | TBD |
-| **Reference** | Bro, this is too hard, just forget about it |
-
----
-
-### 📈 Comparison Summary
+<details>
+<summary><h4>📈 Comparison Summary</h4></summary>
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────┐
@@ -180,9 +161,10 @@ Perfect for: Professional translation, content creation,
 FT = Fine-Tuned
 ```
 
----
+</details>
 
-### 🆚 Why Choose Our Models Over Alternatives?
+<details>
+<summary><h4>🆚 Why Choose Our Models Over Alternatives?</h4></summary>
 
 | Feature | 🪶 Lite | 🎯 Pro | Base Models | Google Translate |
 |:--------|:------:|:------:|:-----------:|:----------------:|
@@ -196,9 +178,14 @@ FT = Fine-Tuned
 | **Edge Deployment** | ✅ | ⚠️ | ✅ | ❌ |
 | **Open Source** | ✅ | ✅ | ✅ | ❌ |
 
+</details>
+
+</details>
+
 ---
 
-## ✨ Features
+<details>
+<summary><h2>✨ Features</h2></summary>
 
 - 🪶 **Dual Options** — Choose between ultra-lite (0.6B) or balanced (4B) models
 - ⚡ **Fast Inference** — Optimized with Unsloth for 2x faster performance
@@ -210,9 +197,12 @@ FT = Fine-Tuned
 - 🔒 **Privacy** — All processing happens locally, no data sent to cloud
 - 🌐 **Offline** — Works without internet connection
 
+</details>
+
 ---
 
-## 🛠️ Installation
+<details>
+<summary><h2>🛠️ Installation</h2></summary>
 
 ```bash
 # Clone the repository
@@ -224,11 +214,15 @@ pip install torch transformers accelerate
 pip install unsloth peft
 ```
 
+</details>
+
 ---
 
-## 🚀 Quick Start
+<details>
+<summary><h2>🚀 Quick Start</h2></summary>
 
-### Using Transformers
+<details>
+<summary><h3>Using Transformers</h3></summary>
 
 ```python
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -254,7 +248,10 @@ translation = tokenizer.decode(outputs[0], skip_special_tokens=True)
 print(translation)
 ```
 
-### Using GGUF (llama.cpp)
+</details>
+
+<details>
+<summary><h3>Using GGUF (llama.cpp)</h3></summary>
 
 ```bash
 # Download GGUF model (Lite version)
@@ -267,7 +264,10 @@ wget https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF/
 ./main -m model-q4_k_m.gguf -p "Translate Persian to English: سلام دنیا"
 ```
 
-### Model Selection Guide
+</details>
+
+<details>
+<summary><h3>Model Selection Guide</h3></summary>
 
 ```python
 # Use this helper to choose the right model
@@ -287,9 +287,10 @@ def select_model(priority="balanced"):
         pass
 ```
 
----
+</details>
 
-### Model Architecture
+<details>
+<summary><h3>Model Architecture</h3></summary>
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -310,14 +311,20 @@ def select_model(priority="balanced"):
 └────────────────────────────┴────────────────────────────────────┘
 ```
 
+</details>
+
+</details>
+
 ---
 
-## 📚 Dataset
+<details>
+<summary><h2>📚 Dataset</h2></summary>
 
 ### Overview
 My models were trained on a highly curated dataset of **300,000 Persian-English sentence pairs**. Instead of relying on massive but noisy datasets, I adopted a "Quality over Quantity" approach, as explored in research on data curation (e.g., [Kreutzer et al., 2018](https://arxiv.org/abs/1805.12282)). I combined filtered web data, high-quality classical translations, and targeted synthetic data to build a robust training set.
 
-### Data Composition & Methodology
+<details>
+<summary><h3>Data Composition & Methodology</h3></summary>
 
 The dataset is constructed from three primary sources:
 
@@ -342,7 +349,10 @@ The dataset is constructed from three primary sources:
     *   **My Solution:** To address these gaps, I generated approximately **50,000 synthetic sentence pairs** via **Back-Translation**.
     *   This data was not random; it was created to specifically cover the linguistic "blind spots" of standard datasets, significantly improving the model's fluency and its ability to handle complex grammatical structures.
 
-### Dataset Quality Comparison
+</details>
+
+<details>
+<summary><h3>Dataset Quality Comparison</h3></summary>
 
 | Dataset | Size | Quality | Composition | Cleaned |
 |---------|------|---------|-------------|---------|
@@ -351,12 +361,15 @@ The dataset is constructed from three primary sources:
 | Mizan (Full) | 1M+ | ⭐⭐⭐⭐ | Literary/Classical | ✅ Yes |
 | OPUS-100 | 1M+ | ⭐⭐⭐ | Generic Multilingual | ❌ No |
 
+</details>
+
 ### Download
 To reproduce my results or use this curated mixture for your own research, you can download the final processed dataset here:
 
-📥 **[Download Cleaned Dataset](YOUR_LINK_HERE)**
+📥 **[Download Dataset](https://huggingface.co/datasets/MahdiMaaref/PersianToEnglishDataset-1M)**
 
-### Data Cleaning Pipeline
+<details>
+<summary><h3>Data Cleaning Pipeline</h3></summary>
 
 ```
 Raw Data → Deduplication → Length Filter → Quality Filter → Final Dataset
@@ -364,7 +377,10 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
   500K+        450K           380K           320K           300K
 ```
 
-### Persian-Specific Challenges Addressed
+</details>
+
+<details>
+<summary><h3>Persian-Specific Challenges Addressed</h3></summary>
 
 - ✅ Right-to-Left (RTL) text handling
 - ✅ Persian-specific characters and diacritics
@@ -373,31 +389,39 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 - ✅ Mixed Persian-Arabic script
 - ✅ Transliteration of names and places
 
+</details>
+
+</details>
+
 ---
 
-## 📦 Model Checkpoints
+<details>
+<summary><h2>📦 Model Checkpoints</h2></summary>
 
 ### 🪶 Lite Model (0.6B)
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
-| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite) |
-| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF) |
-| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF) |
-| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF) |
+| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Download]() |
+| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Download]() |
+| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Download]() |
+| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Download]() |
 
 ### 🎯 Pro Model (4B)
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
-| Full Model | ~8GB | Training/Fine-tuning | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro) |
-| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF) |
-| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF) |
-| GGUF F16 | ~8GB | Maximum Quality | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF) |
+| Full Model | ~8GB | Training/Fine-tuning | [🤗 Download]() |
+| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Download]() |
+| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Download]() |
+| GGUF F16 | ~8GB | Maximum Quality | [🤗 Download]() |
+
+</details>
 
 ---
 
-## 🎯 Which Model Should I Use?
+<details>
+<summary><h2>🎯 Which Model Should I Use?</h2></summary>
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -416,9 +440,12 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+</details>
+
 ---
 
-## 🤝 Contributing
+<details>
+<summary><h2>🤝 Contributing</h2></summary>
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -428,9 +455,12 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+</details>
+
 ---
 
-## 📄 License
+<details>
+<summary><h2>📄 License</h2></summary>
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -446,14 +476,19 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software...
 ```
 
+</details>
+
 ---
 
-## 🙏 Acknowledgments
+<details>
+<summary><h2>🙏 Acknowledgments</h2></summary>
 
 - [Qwen Team](https://github.com/QwenLM) for the excellent base models
 - [Unsloth](https://github.com/unslothai/unsloth) for training optimizations
 - [Hugging Face](https://huggingface.co/) for the transformers library
 - The Persian NLP community for valuable resources and feedback
+
+</details>
 
 ---
 

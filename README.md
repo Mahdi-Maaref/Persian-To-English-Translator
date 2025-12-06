@@ -1,7 +1,7 @@
 <div align="center">
  
  # 🌐 Persian-To-English-Translator
-![Banner](Banner.png)
+![Banner](banner.png)
 ### A Lightweight, Fast, and Accurate Neural Machine Translation Model
 
 

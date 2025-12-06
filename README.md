@@ -402,19 +402,19 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
-| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Download]() |
-| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Download]() |
-| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Download]() |
-| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Download]() |
+| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
 
 ### 🎯 Pro Model (4B)
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
-| Full Model | ~8GB | Training/Fine-tuning | [🤗 Download]() |
-| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Download]() |
-| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Download]() |
-| GGUF F16 | ~8GB | Maximum Quality | [🤗 Download]() |
+| Full Model | ~8GB | Training/Fine-tuning | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| GGUF F16 | ~8GB | Maximum Quality | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
 
 </details>
 

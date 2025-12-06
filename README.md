@@ -26,24 +26,28 @@
 [Dataset](#-dataset) •
 [License](#-license)
 
+<div align="center">
+
 ## 📖 Project Overview
 
-**Persian-To-English-Translator** offers two specialized machine translation models designed to bridge the gap between Persian (Farsi) and English. We provide options for different use cases:
+**Nava** (نوا) offers two specialized machine translation models designed to bridge the gap between Persian (Farsi) and English. These models are tailored for different use cases, providing a choice between extreme speed and maximum accuracy.
 
-| 🪶 **Lite Model** | 🎯 **Pro Model** |
+| 🎯 Nava Lite | 🎯 Nava Pro |
 |:---:|:---:|
-| Qwen3-0.6B | Qwen3-4B |
-| Ultra-fast, minimal resources | Higher accuracy, still lightweight |
+| Based on Qwen2-0.5B | Based on Qwen2-1.5B |
+| Ultra-fast, minimal resources | Higher accuracy, still efficient |
 | Perfect for edge devices | Perfect for quality-focused apps |
+
+
+</div>  
+</div>  
 
 ### 🚀 Key Goals
 
-- **Flexibility:** Choose between speed-optimized or accuracy-optimized models
-- **Low-Resource:** Both models run efficiently on consumer-grade hardware
-- **High Speed:** Fast inference suitable for real-time applications
-- **Accuracy:** Fine-tuned on high-quality, cleaned datasets to handle Persian-English nuances
-
-</div>
+- **Flexibility:** Choose between a speed-optimized model...
+- **Low-Resource:** Both models are designed to run efficiently...
+- **High Speed:** Optimized for fast inference...
+- **Accuracy:** Fine-tuned on high-quality datasets...
 
 ---
 

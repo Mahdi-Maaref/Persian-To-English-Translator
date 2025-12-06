@@ -11,6 +11,7 @@
 [![Framework: Unsloth](https://img.shields.io/badge/Framework-Unsloth-green)](https://github.com/unslothai/unsloth)
 [![Dataset: 300k](https://img.shields.io/badge/Dataset-300k%20Pairs-red)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+### ⭐ Lite for Speed | 🎯 Pro for Precision
 
 ---
 
@@ -398,7 +399,7 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 <details>
 <summary><h2>📦 Model Checkpoints</h2></summary>
 
-### 🪶 Lite Model (0.6B)
+### 🎯 Lite Model (0.6B)
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
@@ -415,30 +416,6 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 | GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
 | GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
 | GGUF F16 | ~8GB | Maximum Quality | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-
-</details>
-
----
-
-<details>
-<summary><h2>🎯 Which Model Should I Use?</h2></summary>
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    MODEL SELECTION GUIDE                        │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  📱 Mobile App / Edge Device?          → 🪶 Lite (0.6B)         │
-│  🖥️ Desktop / Server?                  → 🎯 Pro (4B)            │
-│  ⚡ Real-time Translation?              → 🪶 Lite (0.6B)         │
-│  📝 Professional Content?              → 🎯 Pro (4B)            │
-│  💰 Limited GPU Memory (<4GB)?         → 🪶 Lite (0.6B)         │
-│  🎨 Complex/Idiomatic Text?            → 🎯 Pro (4B)            │
-│  📊 Batch Processing at Scale?         → 🪶 Lite (0.6B)         │
-│  📖 High-Quality Publication?          → 🎯 Pro (4B)            │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
 
 </details>
 
@@ -480,18 +457,6 @@ copies of the Software...
 
 ---
 
-<details>
-<summary><h2>🙏 Acknowledgments</h2></summary>
-
-- [Qwen Team](https://github.com/QwenLM) for the excellent base models
-- [Unsloth](https://github.com/unslothai/unsloth) for training optimizations
-- [Hugging Face](https://huggingface.co/) for the transformers library
-- The Persian NLP community for valuable resources and feedback
-
-</details>
-
----
-
 <div align="center">
 
 ### ⭐ Star this repo if you find it useful!
@@ -499,11 +464,5 @@ copies of the Software...
 **Made with ❤️ for the Persian NLP Community**
 
 [![GitHub stars](https://img.shields.io/github/stars/Mahdi-Maaref/Persian-To-English-Translator?style=social)](https://github.com/Mahdi-Maaref/Persian-To-English-Translator)
-
----
-
-### 🪶 Lite for Speed | 🎯 Pro for Precision
-
-*Both still lighter than a typical browser tab! 🚀*
 
 </div>

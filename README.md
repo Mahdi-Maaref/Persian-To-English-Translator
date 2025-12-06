@@ -289,44 +289,6 @@ def select_model(priority="balanced"):
 
 ---
 
-## 📊 Training Details
-
-### 🪶 Lite Model (Qwen3-0.6B) Training
-
-```
-==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
-   \\   /|    Num examples = 290,376 | Num Epochs = 2 | Total steps = 72,594
-O^O/ \_/ \    Batch size per device = 2 | Gradient accumulation steps = 4
-\        /    Data Parallel GPUs = 1 | Total batch size (2 x 4 x 1) = 8
- "-____-"     Trainable parameters = 20,185,088 of 616,235,008 (3.28% trained)
-```
-
-### 🎯 Pro Model (Qwen3-4B) Training
-
-```
-==((====))==  Unsloth - 2x faster free finetuning | Num GPUs used = 1
-   \\   /|    Num examples = 290,376 | Num Epochs = 2 | Total steps = TBD
-O^O/ \_/ \    Batch size per device = TBD | Gradient accumulation steps = TBD
-\        /    Data Parallel GPUs = 1 | Total batch size = TBD
- "-____-"     Trainable parameters = TBD of ~4,000,000,000 (TBD% trained)
-```
-
-### Hyperparameters Comparison
-
-| Parameter | 🪶 Lite (0.6B) | 🎯 Pro (4B) |
-|-----------|:---:|:---:|
-| **Base Model** | Qwen3-0.6B | Qwen3-4B |
-| **Fine-tuning Method** | PEFT LoRA | PEFT LoRA |
-| **Optimizer** | Unsloth | Unsloth |
-| **Number of Epochs** | 2 | 2 |
-| **Total Training Steps** | 72,594 | TBD |
-| **Batch Size per Device** | 2 | TBD |
-| **Gradient Accumulation Steps** | 4 | TBD |
-| **Effective Batch Size** | 8 | TBD |
-| **Trainable Parameters** | 20.2M (3.28%) | TBD |
-| **Total Parameters** | 616M | ~4B |
-| **Training Examples** | 290,376 | 290,376 |
-
 ### Model Architecture
 
 ```

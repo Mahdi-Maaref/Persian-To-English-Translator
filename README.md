@@ -42,6 +42,7 @@
 | Based on Qwen3-0.6B | Based on Qwen3-4B |
 | Ultra-fast, minimal resources | Higher accuracy, still efficient |
 | Perfect for edge devices | Perfect for quality-focused apps |
+> 💡 **Note:** Even our "Pro" 4B model is remarkably lightweight compared to industry giants like GPT-4 (1.7T params) or LLaMA-70B. It's like comparing a feather to an elephant!
 
 </div>
 
@@ -74,23 +75,8 @@
 | **GPU Required** | Optional | Recommended |
 | **Best For** | Mobile, Edge, Real-time | Desktop, Server, Quality |
 
-### 🎯 Lite Model (0.6B) — Speed Champion
-```
-Perfect for: Mobile apps, IoT devices, real-time translation, 
-             low-power devices, batch processing at scale
-```
 
-### 🎯 Pro Model (4B) — Accuracy Champion
 ```
-Perfect for: Professional translation, content creation, 
-             complex sentences, idiomatic expressions, nuanced text
-```
-
-> 💡 **Note:** Even our "Pro" 4B model is remarkably lightweight compared to industry giants like GPT-4 (1.7T params) or LLaMA-70B. It's like comparing a feather to an elephant!
-
-</details>
-
----
 
 <details>
 <summary><h2>📊 Model Comparison & Benchmarks</h2></summary>
@@ -265,58 +251,6 @@ wget https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF/
 ./main -m model-q4_k_m.gguf -p "Translate Persian to English: سلام دنیا"
 ```
 
-</details>
-
-<details>
-<summary><h3>Model Selection Guide</h3></summary>
-
-```python
-# Use this helper to choose the right model
-def select_model(priority="balanced"):
-    """
-    priority options:
-    - "speed": Use Lite model (0.6B)
-    - "quality": Use Pro model (4B)  
-    - "balanced": Use Lite for simple, Pro for complex text
-    """
-    if priority == "speed":
-        return "Mahdi-Maaref/Persian-To-English-Translator-Lite"
-    elif priority == "quality":
-        return "Mahdi-Maaref/Persian-To-English-Translator-Pro"
-    else:
-        # Implement your logic here
-        pass
-```
-
-</details>
-
-<details>
-<summary><h3>Model Architecture</h3></summary>
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     Persian-To-English-Translator               │
-├────────────────────────────┬────────────────────────────────────┤
-│     🪶 LITE MODEL          │        🎯 PRO MODEL                │
-├────────────────────────────┼────────────────────────────────────┤
-│    Qwen3-0.6B (Base)       │       Qwen3-4B (Base)              │
-│  + LoRA Adapters           │     + LoRA Adapters                │
-│  + Unsloth Optimizations   │     + Unsloth Optimizations        │
-├────────────────────────────┼────────────────────────────────────┤
-│  Trainable: 20.2M (3.28%)  │     Trainable: TBD                 │
-│  Total: 616M params        │     Total: ~4B params              │
-├────────────────────────────┼────────────────────────────────────┤
-│  💨 Speed: ★★★★★           │     💨 Speed: ★★★☆☆                │
-│  🎯 Quality: ★★★★☆         │     🎯 Quality: ★★★★★              │
-│  💾 Size: ★★★★★            │     💾 Size: ★★★★☆                 │
-└────────────────────────────┴────────────────────────────────────┘
-```
-
-</details>
-
-</details>
-
----
 
 <details>
 <summary><h2>📚 Dataset</h2></summary>

@@ -34,7 +34,7 @@
 
 | 🎯 Nava Lite | 🎯 Nava Pro |
 |:---:|:---:|
-| Based on Qwen2-0.5B | Based on Qwen2-1.5B |
+| Based on Qwen3-0.6B | Based on Qwen3-4B |
 | Ultra-fast, minimal resources | Higher accuracy, still efficient |
 | Perfect for edge devices | Perfect for quality-focused apps |
 
@@ -55,7 +55,7 @@
 
 ### Model Specifications
 
-| Feature | 🪶 **Lite (0.6B)** | 🎯 **Pro (4B)** |
+| Feature | 🎯 **Nava Lite (0.6B)** | 🎯 **Nava Pro (4B)** |
 |---------|:---:|:---:|
 | **Base Model** | Qwen3-0.6B | Qwen3-4B |
 | **Total Parameters** | 616M | ~4B |
@@ -68,7 +68,7 @@
 | **GPU Required** | Optional | Recommended |
 | **Best For** | Mobile, Edge, Real-time | Desktop, Server, Quality |
 
-### 🪶 Lite Model (0.6B) — Speed Champion
+### 🎯 Lite Model (0.6B) — Speed Champion
 ```
 Perfect for: Mobile apps, IoT devices, real-time translation, 
              low-power devices, batch processing at scale

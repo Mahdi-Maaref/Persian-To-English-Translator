@@ -362,13 +362,15 @@ The dataset is constructed from three primary sources:
 1.  **Filtered CCMatrix (~25% of Source):**
     *   I utilized the [CCMatrix](https://opus.nlpl.eu/CCMatrix/en&fa/v1/CCMatrix) dataset as a base.
     *   Through strict **error-distribution analysis** and scoring with larger teacher models, I filtered out noise and misalignment, keeping only the top **~25%** (the cleanest portion).
+
 <div align="center">
   <img src="images/dataset-01.jpg" alt="Noise Distribution Analysis 1" width="90%"/>
   <br>
   <img src="images/dataset-02.jpg" alt="Noise Distribution Analysis 2" width="90%"/>
   <br>
-  <em>Figure: As can be seen, approximately thirty to forty percent of the data has moderate to very high noise levels.</em>
+  <em>Figure: As can be seen, approximately 15 to 35 percent of the data has moderate to very high noise levels.</em>
 </div>
+
 2.  **Mizan Subset (~10% of Source):**
     *   I incorporated a carefully selected subset (approx. 10%) of the **Mizan** dataset.
     *   This addition helps the model handle more formal, literary, and classical sentence structures often found in Persian texts.

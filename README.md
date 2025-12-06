@@ -1,16 +1,17 @@
 <div align="center">
-
+ # 🌐 Persian-To-English-Translator
+   
 ![Banner](Banner.png)
-
-# 🌐 Persian-To-English-Translator
-
 ### A Lightweight, Fast, and Accurate Neural Machine Translation Model
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Hugging Face](https://img.shields.io/badge/🤗%20Hugging%20Face-Model-orange)](https://huggingface.co/)
 [![Unsloth](https://img.shields.io/badge/⚡-Unsloth-purple)](https://github.com/unslothai/unsloth)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Model: Qwen3](https://img.shields.io/badge/Base%20Model-Qwen3--0.6B-blue)](https://huggingface.co/Qwen)
+[![Framework: Unsloth](https://img.shields.io/badge/Framework-Unsloth-green)](https://github.com/unslothai/unsloth)
+[![Dataset: 300k](https://img.shields.io/badge/Dataset-300k%20Pairs-red)]()
 ---
 
 **A fine-tuned Persian to English translation model based on Qwen3-0.6B, optimized for low-resource environments while maintaining high translation quality.**
@@ -21,10 +22,7 @@
 [Training](#-training-details) •
 [Dataset](#-dataset) •
 [License](#-license)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Model: Qwen3](https://img.shields.io/badge/Base%20Model-Qwen3--0.6B-blue)](https://huggingface.co/Qwen)
-[![Framework: Unsloth](https://img.shields.io/badge/Framework-Unsloth-green)](https://github.com/unslothai/unsloth)
-[![Dataset: 300k](https://img.shields.io/badge/Dataset-300k%20Pairs-red)]()
+
 
 ## 📖 Project Overview
 **Persian-To-English-Translator** is a specialized, lightweight machine translation model designed to bridge the gap between Persian (Farsi) and English with high speed and accuracy. Built upon the **Qwen3-0.6B** architecture, this project aims to provide an efficient solution for low-resource environments without compromising on translation quality.

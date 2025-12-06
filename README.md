@@ -353,18 +353,43 @@ O^O/ \_/ \    Batch size per device = TBD | Gradient accumulation steps = TBD
 ## 📚 Dataset
 
 ### Overview
+My models were trained on a highly curated dataset of **300,000 Persian-English sentence pairs**. Instead of relying on massive but noisy datasets, I adopted a "Quality over Quantity" approach, as explored in research on data curation (e.g., [Kreutzer et al., 2018](https://arxiv.org/abs/1805.12282)). I combined filtered web data, high-quality classical translations, and targeted synthetic data to build a robust training set.
 
-Both models were trained on **300,000 high-quality Persian-English sentence pairs**, carefully curated and cleaned to address specific challenges in Persian-to-English translation.
+### Data Composition & Methodology
+
+The dataset is constructed from three primary sources:
+
+1.  **Filtered CCMatrix (~25% of Source):**
+    *   I utilized the [CCMatrix](https://opus.nlpl.eu/CCMatrix/en&fa/v1/CCMatrix) dataset as a base.
+    *   Through strict **error-distribution analysis** and scoring with larger teacher models, I filtered out noise and misalignment, keeping only the top **~25%** (the cleanest portion).
+<div align="center">
+  <img src="images/dataset-01.jpg" alt="Noise Distribution Analysis 1" width="45%" style="margin-right: 5%;"/>
+  <img src="images/dataset-02.jpg" alt="Noise Distribution Analysis 2" width="45%"/>
+  <br>
+  <em>Figure: As can be seen, approximately thirty to forty percent of the data has moderate to very high noise levels.</em>
+</div>
+2.  **Mizan Subset (~10% of Source):**
+    *   I incorporated a carefully selected subset (approx. 10%) of the **Mizan** dataset.
+    *   This addition helps the model handle more formal, literary, and classical sentence structures often found in Persian texts.
+
+3.  **High-Quality Synthetic Data (~50K Pairs):**
+    *   **The Persian Challenge:** Persian is a low-resource language with complex morphology and flexible word order. Generic models often struggle with these nuances, leading to specific translation weaknesses.
+    *   **My Solution:** To address these gaps, I generated approximately **50,000 synthetic sentence pairs** via **Back-Translation**.
+    *   This data was not random; it was created to specifically cover the linguistic "blind spots" of standard datasets, significantly improving the model's fluency and its ability to handle complex grammatical structures.
 
 ### Dataset Quality Comparison
 
-| Dataset | Size | Quality | Persian-Specific | Cleaned | Notes |
-|---------|------|---------|------------------|---------|-------|
-| **Ours (Used)** | 300K | ⭐⭐⭐⭐⭐ | ✅ Yes | ✅ Yes | Curated for FA→EN challenges |
-| OPUS-100 | 1M+ | ⭐⭐⭐ | ❌ No | ❌ No | Generic multilingual |
-| CCAligned | 500K+ | ⭐⭐ | ❌ No | ❌ No | Noisy web crawl |
-| WikiMatrix | 200K | ⭐⭐⭐ | ❌ No | Partial | Wikipedia only |
-| TED2020 | 50K | ⭐⭐⭐⭐ | ❌ No | ✅ Yes | Limited domain |
+| Dataset | Size | Quality | Composition | Cleaned |
+|---------|------|---------|-------------|---------|
+| **Mine (Final)** | **300K** | ⭐⭐⭐⭐⭐ | **Filtered CCMatrix + Mizan + Synthetic** | ✅ **Yes (Manually & Auto)** |
+| CCMatrix (Raw) | 25M+ | ⭐⭐ | CommonCrawl Web Data | ❌ No |
+| Mizan (Full) | 1M+ | ⭐⭐⭐⭐ | Literary/Classical | ✅ Yes |
+| OPUS-100 | 1M+ | ⭐⭐⭐ | Generic Multilingual | ❌ No |
+
+### Download
+To reproduce my results or use this curated mixture for your own research, you can download the final processed dataset here:
+
+📥 **[Download Cleaned Dataset](YOUR_LINK_HERE)**
 
 ### Data Cleaning Pipeline
 

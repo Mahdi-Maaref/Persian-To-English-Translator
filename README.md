@@ -1,5 +1,3 @@
-```markdown
-<div align="center">
  
 # 🌐 Persian-To-English-Translator
 ![Banner](banner.png)
@@ -18,7 +16,6 @@
 **Two fine-tuned Persian to English translation models: one ultra-lightweight for speed, one larger for maximum accuracy — both optimized for efficiency.**
 
 [Models](#-available-models) •
-[Comparison](#-model-comparison--benchmarks) •
 [Features](#-features) •
 [Installation](#-installation) •
 [Quick Start](#-quick-start) •
@@ -49,7 +46,7 @@
 
 ## 🔥 Available Models
 
-### Model Specifications
+### Model Comparison
 
 | Feature | 🪶 **Lite (0.6B)** | 🎯 **Pro (4B)** |
 |---------|:---:|:---:|
@@ -80,120 +77,6 @@ Perfect for: Professional translation, content creation,
 
 ---
 
-## 📊 Model Comparison & Benchmarks
-
-### 🏆 Performance Comparison: Fine-tuned vs Base Models vs Google Translate
-
-#### Quantitative Metrics
-
-| Model | BLEU ↑ | chrF ↑ | COMET ↑ | Tokens/sec (GPU) ↑ | Tokens/sec (CPU) ↑ |
-|:------|:------:|:------:|:-------:|:------------------:|:------------------:|
-| **🪶 Lite (Fine-tuned)** | TBD | TBD | TBD | TBD | TBD |
-| Qwen3-0.6B (Base) | TBD | TBD | TBD | TBD | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD | TBD | TBD | TBD | TBD |
-| Qwen3-4B (Base) | TBD | TBD | TBD | TBD | TBD |
-| Google Translate | TBD | TBD | TBD | N/A | N/A |
-
-> 🚧 **Note:** Comprehensive benchmarks are in progress. Results will be updated soon.
-
-#### Improvement Over Base Models
-
-| Comparison | BLEU Improvement | chrF Improvement | Notes |
-|:-----------|:----------------:|:----------------:|:------|
-| 🪶 Lite vs Qwen3-0.6B Base | +TBD% | +TBD% | Specialized for FA→EN |
-| 🎯 Pro vs Qwen3-4B Base | +TBD% | +TBD% | Higher baseline, more gains |
-| 🪶 Lite vs Google Translate | TBD | TBD | Offline capable! |
-| 🎯 Pro vs Google Translate | TBD | TBD | Privacy-preserving! |
-
----
-
-### 📝 Qualitative Comparison: Translation Examples
-
-#### Example 1: Simple Sentence
-| Source (Persian) | سلام، حال شما چطور است؟ |
-|:-----------------|:------------------------|
-| **🪶 Lite (Fine-tuned)** | Hello, how are you? |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | Hello, how are you doing? |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | Hello, how are you? |
-| **Reference** | Hello, how are you? |
-
-#### Example 2: Complex/Idiomatic Sentence
-| Source (Persian) | از کوزه همان برون تراود که در اوست |
-|:-----------------|:-----------------------------------|
-| **🪶 Lite (Fine-tuned)** | TBD |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | TBD |
-| **Reference** | What's bred in the bone comes out in the flesh |
-
-#### Example 3: Formal/Literary Text
-| Source (Persian) | در این راستا، توسعه پایدار به عنوان یکی از اهداف اصلی مورد توجه قرار گرفته است |
-|:-----------------|:-----------------------------------------------------------------------------|
-| **🪶 Lite (Fine-tuned)** | TBD |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | TBD |
-| **Reference** | In this regard, sustainable development has been considered as one of the main objectives |
-
-#### Example 4: Colloquial/Informal Text
-| Source (Persian) | داداش این کار خیلی سخته، ولش کن بیخیال |
-|:-----------------|:--------------------------------------|
-| **🪶 Lite (Fine-tuned)** | TBD |
-| Qwen3-0.6B (Base) | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD |
-| Qwen3-4B (Base) | TBD |
-| Google Translate | TBD |
-| **Reference** | Bro, this is too hard, just forget about it |
-
----
-
-### 📈 Comparison Summary
-
-```
-┌────────────────────────────────────────────────────────────────────────────┐
-│                        TRANSLATION QUALITY RADAR                           │
-├────────────────────────────────────────────────────────────────────────────┤
-│                                                                            │
-│   Category              Lite(FT)  Base-0.6B  Pro(FT)  Base-4B   Google    │
-│   ─────────────────────────────────────────────────────────────────────   │
-│   Simple Sentences      ★★★★★     ★★★☆☆      ★★★★★    ★★★★☆     ★★★★★     │
-│   Complex Sentences     ★★★★☆     ★★☆☆☆      ★★★★★    ★★★☆☆     ★★★★☆     │
-│   Idioms & Proverbs     ★★★☆☆     ★☆☆☆☆      ★★★★★    ★★☆☆☆     ★★★☆☆     │
-│   Formal Text           ★★★★☆     ★★☆☆☆      ★★★★★    ★★★☆☆     ★★★★☆     │
-│   Colloquial Text       ★★★★☆     ★☆☆☆☆      ★★★★★    ★★☆☆☆     ★★★☆☆     │
-│   Technical Terms       ★★★☆☆     ★★☆☆☆      ★★★★☆    ★★★☆☆     ★★★★★     │
-│   ─────────────────────────────────────────────────────────────────────   │
-│   Speed                 ★★★★★     ★★★★★      ★★★☆☆    ★★★☆☆     ★★★★☆     │
-│   Offline Capability    ★★★★★     ★★★★★      ★★★★★    ★★★★★     ☆☆☆☆☆     │
-│   Privacy               ★★★★★     ★★★★★      ★★★★★    ★★★★★     ★☆☆☆☆     │
-│                                                                            │
-└────────────────────────────────────────────────────────────────────────────┘
-
-FT = Fine-Tuned
-```
-
----
-
-### 🆚 Why Choose Our Models Over Alternatives?
-
-| Feature | 🪶 Lite | 🎯 Pro | Base Models | Google Translate |
-|:--------|:------:|:------:|:-----------:|:----------------:|
-| **Persian-Optimized** | ✅ | ✅ | ❌ | ✅ |
-| **Offline Usage** | ✅ | ✅ | ✅ | ❌ |
-| **Privacy-Preserving** | ✅ | ✅ | ✅ | ❌ |
-| **Low Latency** | ✅ | ✅ | ✅ | ❌ |
-| **No API Costs** | ✅ | ✅ | ✅ | ❌ |
-| **Customizable** | ✅ | ✅ | ✅ | ❌ |
-| **Idiomatic Understanding** | ✅ | ✅ | ❌ | Partial |
-| **Edge Deployment** | ✅ | ⚠️ | ✅ | ❌ |
-| **Open Source** | ✅ | ✅ | ✅ | ❌ |
-
----
-
 ## ✨ Features
 
 - 🪶 **Dual Options** — Choose between ultra-lite (0.6B) or balanced (4B) models
@@ -203,8 +86,6 @@ FT = Fine-Tuned
 - 📦 **Multiple Formats** — Available in GGUF format for local deployment
 - 🔓 **Open Source** — MIT licensed for maximum flexibility
 - 🔄 **Scalable** — Pick the right model for your resource constraints
-- 🔒 **Privacy** — All processing happens locally, no data sent to cloud
-- 🌐 **Offline** — Works without internet connection
 
 ---
 
@@ -212,7 +93,7 @@ FT = Fine-Tuned
 
 ```bash
 # Clone the repository
-git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
+git clone https://github.com/yourusername/Persian-To-English-Translator.git
 cd Persian-To-English-Translator
 
 # Install dependencies
@@ -231,10 +112,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # Choose your model:
 # Lite (0.6B) - Fast & Lightweight
-model_name = "Mahdi-Maaref/Persian-To-English-Translator-Lite"
+model_name = "your-username/Persian-To-English-Translator-Lite"
 
 # Pro (4B) - Higher Accuracy
-# model_name = "Mahdi-Maaref/Persian-To-English-Translator-Pro"
+# model_name = "your-username/Persian-To-English-Translator-Pro"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
@@ -254,10 +135,10 @@ print(translation)
 
 ```bash
 # Download GGUF model (Lite version)
-wget https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF/resolve/main/model-q4_k_m.gguf
+wget https://huggingface.co/your-username/Persian-To-English-Translator-Lite-GGUF/resolve/main/model-q4_k_m.gguf
 
 # Or Pro version
-wget https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF/resolve/main/model-q4_k_m.gguf
+wget https://huggingface.co/your-username/Persian-To-English-Translator-Pro-GGUF/resolve/main/model-q4_k_m.gguf
 
 # Run with llama.cpp
 ./main -m model-q4_k_m.gguf -p "Translate Persian to English: سلام دنیا"
@@ -275,9 +156,9 @@ def select_model(priority="balanced"):
     - "balanced": Use Lite for simple, Pro for complex text
     """
     if priority == "speed":
-        return "Mahdi-Maaref/Persian-To-English-Translator-Lite"
+        return "your-username/Persian-To-English-Translator-Lite"
     elif priority == "quality":
-        return "Mahdi-Maaref/Persian-To-English-Translator-Pro"
+        return "your-username/Persian-To-English-Translator-Pro"
     else:
         # Implement your logic here
         pass
@@ -381,25 +262,39 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 
 ---
 
+## 📈 Performance
+
+> 🚧 **Coming Soon**: BLEU Score and other evaluation metrics will be added after comprehensive benchmarking.
+
+| Metric | 🪶 Lite (0.6B) | 🎯 Pro (4B) | Status |
+|--------|:---:|:---:|:---:|
+| BLEU | TBD | TBD | 🔄 In Progress |
+| chrF | TBD | TBD | 🔄 In Progress |
+| COMET | TBD | TBD | 🔄 In Progress |
+| Tokens/Second (CPU) | TBD | TBD | 🔄 In Progress |
+| Tokens/Second (GPU) | TBD | TBD | 🔄 In Progress |
+
+---
+
 ## 📦 Model Checkpoints
 
 ### 🪶 Lite Model (0.6B)
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
-| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite) |
-| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF) |
-| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF) |
-| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF) |
+| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Hub](https://huggingface.co/) |
+| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Hub](https://huggingface.co/) |
+| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Hub](https://huggingface.co/) |
+| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Hub](https://huggingface.co/) |
 
 ### 🎯 Pro Model (4B)
 
 | Format | Size | Use Case | Download |
 |--------|------|----------|----------|
-| Full Model | ~8GB | Training/Fine-tuning | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro) |
-| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF) |
-| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF) |
-| GGUF F16 | ~8GB | Maximum Quality | [🤗 Hub](https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF) |
+| Full Model | ~8GB | Training/Fine-tuning | [🤗 Hub](https://huggingface.co/) |
+| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Hub](https://huggingface.co/) |
+| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Hub](https://huggingface.co/) |
+| GGUF F16 | ~8GB | Maximum Quality | [🤗 Hub](https://huggingface.co/) |
 
 ---
 
@@ -443,7 +338,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ```
 MIT License
 
-Copyright (c) 2024 Mahdi Maaref
+Copyright (c) 2024
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -469,13 +364,10 @@ copies of the Software...
 
 **Made with ❤️ for the Persian NLP Community**
 
-[![GitHub stars](https://img.shields.io/github/stars/Mahdi-Maaref/Persian-To-English-Translator?style=social)](https://github.com/Mahdi-Maaref/Persian-To-English-Translator)
+[![GitHub stars](https://img.shields.io/github/stars/yourusername/Persian-To-English-Translator?style=social)](https://github.com/yourusername/Persian-To-English-Translator)
 
 ---
 
 ### 🪶 Lite for Speed | 🎯 Pro for Precision
 
 *Both still lighter than a typical browser tab! 🚀*
-
-</div>
-```

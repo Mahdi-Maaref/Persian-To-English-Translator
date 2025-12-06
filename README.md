@@ -25,9 +25,11 @@
 
 
 ## 📖 Project Overview
+
 **Persian-To-English-Translator** is a specialized, lightweight machine translation model designed to bridge the gap between Persian (Farsi) and English with high speed and accuracy. Built upon the **Qwen3-0.6B** architecture, this project aims to provide an efficient solution for low-resource environments without compromising on translation quality.
 
 ### 🚀 Key Goals
+
 - **Low-Resource:** Optimized to run efficiently on consumer-grade hardware.
 - **High Speed:** Fast inference suitable for real-time applications.
 - **Accuracy:** Finetuned on high-quality, cleaned datasets to handle nuances of Persian-English translation.

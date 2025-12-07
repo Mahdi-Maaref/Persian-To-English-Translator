@@ -53,108 +53,41 @@
 
 ---
 
-## 🔥 Available Models
+# 🔥 Available Models
 
-### Model Specifications
 
-| Feature | 🎯 **Nava Lite (0.6B)** | 🎯 **Nava Pro (4B)** |
-|---------|:---:|:---:|
-| **Base Model** | Qwen3-0.6B | Qwen3-4B |
-| **Total Parameters** | 616M | ~4B |
-| **Trainable Params** | 20.2M (3.28%) | TBD |
-| **Model Size (FP16)** | ~1.2GB | ~8GB |
-| **GGUF Q4_K_M Size** | ~400MB | ~2.5GB |
-| **Inference Speed** | ⚡⚡⚡⚡⚡ | ⚡⚡⚡ |
-| **Translation Quality** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **RAM Required** | ~2GB | ~6GB |
-| **GPU Required** | Optional | Recommended |
-| **Best For** | Mobile, Edge, Real-time | Desktop, Server, Quality |
+## 📊 Benchmark Results
 
-### 🎯 Lite Model (0.6B) — Speed Champion
-```
-Perfect for: Mobile apps, IoT devices, real-time translation, 
-             low-power devices, batch processing at scale
-```
+| Model | BLEU | chrF | TER ↓ | BERTScore | COMET |
+|-------|------|------|-------|-----------|-------|
+| Qwen3-Model (Base) | 13.06 | 39.05 | 80.72 | 69.39 | 64.10 |
+| **Nava-Lite** | **33.81** | **56.25** | **57.76** | **84.44** | **80.77** |
+| **Improvement** | **+159%** | **+44%** | **-28%** | **+22%** | **+26%** |
 
-### 🎯 Pro Model (4B) — Accuracy Champion
-```
-Perfect for: Professional translation, content creation, 
-             complex sentences, idiomatic expressions, nuanced text
-```
+BLEU: Measures exact n-gram matches between translation and reference (higher = better)
 
-> 💡 **Note:** Even our "Pro" 4B model is remarkably lightweight compared to industry giants like GPT-4 (1.7T params) or LLaMA-70B. It's like comparing a feather to an elephant!
+chrF: Character-level F-score, robust for morphologically rich languages (higher = better)
+
+TER: Translation Edit Rate — minimum edits needed to fix output (lower = better)
+
+BERTScore: Semantic similarity using BERT embeddings (higher = better)
+
+COMET: Neural metric trained on human judgments, best predictor of quality (higher = better)
 
 ---
 
-## 📊 Model Comparison & Benchmarks
 
-### 🏆 Performance Comparison: Fine-tuned vs Base Models vs Google Translate
+## 📝 Translation Examples
 
-#### 📈 Quantitative Metrics
-
-| Model | BLEU ↑ | chrF ↑ | COMET ↑ | Tokens/sec (GPU) ↑ | Tokens/sec (CPU) ↑ |
-|:------|:------:|:------:|:-------:|:------------------:|:------------------:|
-| **🪶 Lite (Fine-tuned)** | TBD | TBD | TBD | TBD | TBD |
-| Qwen3-0.6B (Base) | TBD | TBD | TBD | TBD | TBD |
-| **🎯 Pro (Fine-tuned)** | TBD | TBD | TBD | TBD | TBD |
-| Qwen3-4B (Base) | TBD | TBD | TBD | TBD | TBD |
-| Google Translate | TBD | TBD | TBD | N/A | N/A |
-
-> 🚧 **Note:** Comprehensive benchmarks are in progress. Results will be updated soon.
-
-#### 📊 Improvement Over Base Models
-
-| Comparison | BLEU Improvement | chrF Improvement | Notes |
-|:-----------|:----------------:|:----------------:|:------|
-| 🪶 Lite vs Qwen3-0.6B Base | +TBD% | +TBD% | Specialized for FA→EN |
-| 🎯 Pro vs Qwen3-4B Base | +TBD% | +TBD% | Higher baseline, more gains |
-| 🪶 Lite vs Google Translate | TBD | TBD | Offline capable! |
-| 🎯 Pro vs Google Translate | TBD | TBD | Privacy-preserving! |
-
-#### 📝 Qualitative Comparison
-
-| Challenge Type | Source (Persian) | Qwen-0.6B (Base) | Google Translate | Ours (Fine-tuned) |
-| :--- | :--- | :--- | :--- | :--- |
-| **Simple** | سلام، حال شما چطور است؟ | TBD | Hello, how are you? | Hello, how are you? |
-| **Idiomatic** | از کوزه همان برون تراود که در اوست | TBD | TBD | TBD |
-| **Formal** | در این راستا، توسعه پایدار به عنوان یکی از اهداف اصلی مورد توجه قرار گرفته است | TBD | TBD | TBD |
-| **Colloquial** | داداش این کار خیلی سخته، ولش کن بیخیال | TBD | TBD | TBD |
-
-#### 📈 Comparison Summary
-
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                        TRANSLATION QUALITY RADAR                                       │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                        │
-│   Category              Lite(FT)     Base-0.6B     Pro(FT)    Base-4B      Google      │
-│   ─────────────────────────────────────────────────────────────────────────────────────│
-│   Simple Sentences      ★★★★★     ★★★☆☆      ★★★★★    ★★★★☆     ★★★★★     │
-│   Complex Sentences     ★★★★☆     ★★☆☆☆      ★★★★★    ★★★☆☆     ★★★★☆     │
-│   Idioms & Proverbs     ★★★☆☆     ★☆☆☆☆      ★★★★★    ★★☆☆☆     ★★★☆☆     │
-│   Formal Text           ★★★★☆     ★★☆☆☆      ★★★★★    ★★★☆☆     ★★★★☆     │
-│   Colloquial Text       ★★★★☆     ★☆☆☆☆      ★★★★★    ★★☆☆☆     ★★★☆☆     │
-│   Technical Terms       ★★★☆☆     ★★☆☆☆      ★★★★☆    ★★★☆☆     ★★★★★     │
-│   ─────────────────────────────────────────────────────────────────────────────────────│
-│   Speed                 ★★★★★     ★★★★★      ★★★☆☆    ★★★☆☆     ★★★★☆     │
-│   Offline Capability    ★★★★★     ★★★★★      ★★★★★    ★★★★★     ☆☆☆☆☆     │
-│   Privacy               ★★★★★     ★★★★★      ★★★★★    ★★★★★     ★☆☆☆☆     │
-│                                                                                        │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-
-FT = Fine-Tuned
-```
-
-
+<div align="center">
+  <img src="images/resualts.png" alt="persian to english translator" width="90%"/>
+  <br>
+  <em>Figure: Nava Lite VS Qwen3 Model</em>
+</div>
 
 ## 🛠️ Installation
 
 You can use the `inference.py` script from this repository on your local system, Google Colab, or cloud computing services.
-
-### 📋 Prerequisites
-
-- Python 3.8 or higher
-- CUDA-compatible GPU (recommended but not required)
 
 ### 🖥️ Local System
 
@@ -269,7 +202,7 @@ To reproduce my results or use this curated mixture for your own research, you c
 ```
 Raw Data → Deduplication → Length Filter → Quality Filter → Final Dataset
    │              │              │              │              │
-  1.3M+        1.2K           800K           310K           310K
+  1.3M+        1.2M           800K           310K           310K
 ```
 
 ### Persian-Specific Challenges Addressed
@@ -292,21 +225,13 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 | **🎯 Pro (4B)** | tbd | ~8GB | Training/Fine-tuning/Inference | 🚧 *Coming Soon* |
 
 > 💡 **Note:** Pro model is currently in development. Stay tuned for updates!
----
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ---
 
-## 📄 License
+## 📄 Contributing and License
+
+🤝 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 

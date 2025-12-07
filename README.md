@@ -30,8 +30,7 @@
 
 ---
 
-<details>
-<summary><h2>📖 Project Overview</h2></summary>
+## 📖 Project Overview
 
 <div align="center">
 
@@ -52,12 +51,9 @@
 - **High Speed:** Optimized for fast inference...
 - **Accuracy:** Fine-tuned on high-quality datasets...
 
-</details>
-
 ---
 
-<details>
-<summary><h2>🔥 Available Models</h2></summary>
+## 🔥 Available Models
 
 ### Model Specifications
 
@@ -88,17 +84,13 @@ Perfect for: Professional translation, content creation,
 
 > 💡 **Note:** Even our "Pro" 4B model is remarkably lightweight compared to industry giants like GPT-4 (1.7T params) or LLaMA-70B. It's like comparing a feather to an elephant!
 
-</details>
-
 ---
 
-<details>
-<summary><h2>📊 Model Comparison & Benchmarks</h2></summary>
+## 📊 Model Comparison & Benchmarks
 
 ### 🏆 Performance Comparison: Fine-tuned vs Base Models vs Google Translate
 
-<details>
-<summary><h4>📈 Quantitative Metrics</h4></summary>
+#### 📈 Quantitative Metrics
 
 | Model | BLEU ↑ | chrF ↑ | COMET ↑ | Tokens/sec (GPU) ↑ | Tokens/sec (CPU) ↑ |
 |:------|:------:|:------:|:-------:|:------------------:|:------------------:|
@@ -110,10 +102,7 @@ Perfect for: Professional translation, content creation,
 
 > 🚧 **Note:** Comprehensive benchmarks are in progress. Results will be updated soon.
 
-</details>
-
-<details>
-<summary><h4>📊 Improvement Over Base Models</h4></summary>
+#### 📊 Improvement Over Base Models
 
 | Comparison | BLEU Improvement | chrF Improvement | Notes |
 |:-----------|:----------------:|:----------------:|:------|
@@ -122,10 +111,7 @@ Perfect for: Professional translation, content creation,
 | 🪶 Lite vs Google Translate | TBD | TBD | Offline capable! |
 | 🎯 Pro vs Google Translate | TBD | TBD | Privacy-preserving! |
 
-</details>
-
-<details>
-<summary><h4>📝 Qualitative Comparison</h4></summary>
+#### 📝 Qualitative Comparison
 
 | Challenge Type | Source (Persian) | Qwen-0.6B (Base) | Google Translate | Ours (Fine-tuned) |
 | :--- | :--- | :--- | :--- | :--- |
@@ -134,76 +120,34 @@ Perfect for: Professional translation, content creation,
 | **Formal** | در این راستا، توسعه پایدار به عنوان یکی از اهداف اصلی مورد توجه قرار گرفته است | TBD | TBD | TBD |
 | **Colloquial** | داداش این کار خیلی سخته، ولش کن بیخیال | TBD | TBD | TBD |
 
-</details>
-
-<details>
-<summary><h4>📈 Comparison Summary</h4></summary>
+#### 📈 Comparison Summary
 
 ```
-┌────────────────────────────────────────────────────────────────────────────┐
-│                        TRANSLATION QUALITY RADAR                           │
-├────────────────────────────────────────────────────────────────────────────┤
-│                                                                            │
-│   Category              Lite(FT)  Base-0.6B  Pro(FT)  Base-4B   Google    │
-│   ─────────────────────────────────────────────────────────────────────   │
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                        TRANSLATION QUALITY RADAR                                       │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                        │
+│   Category              Lite(FT)     Base-0.6B     Pro(FT)    Base-4B      Google      │
+│   ─────────────────────────────────────────────────────────────────────────────────────│
 │   Simple Sentences      ★★★★★     ★★★☆☆      ★★★★★    ★★★★☆     ★★★★★     │
 │   Complex Sentences     ★★★★☆     ★★☆☆☆      ★★★★★    ★★★☆☆     ★★★★☆     │
 │   Idioms & Proverbs     ★★★☆☆     ★☆☆☆☆      ★★★★★    ★★☆☆☆     ★★★☆☆     │
 │   Formal Text           ★★★★☆     ★★☆☆☆      ★★★★★    ★★★☆☆     ★★★★☆     │
 │   Colloquial Text       ★★★★☆     ★☆☆☆☆      ★★★★★    ★★☆☆☆     ★★★☆☆     │
 │   Technical Terms       ★★★☆☆     ★★☆☆☆      ★★★★☆    ★★★☆☆     ★★★★★     │
-│   ─────────────────────────────────────────────────────────────────────   │
+│   ─────────────────────────────────────────────────────────────────────────────────────│
 │   Speed                 ★★★★★     ★★★★★      ★★★☆☆    ★★★☆☆     ★★★★☆     │
 │   Offline Capability    ★★★★★     ★★★★★      ★★★★★    ★★★★★     ☆☆☆☆☆     │
 │   Privacy               ★★★★★     ★★★★★      ★★★★★    ★★★★★     ★☆☆☆☆     │
-│                                                                            │
-└────────────────────────────────────────────────────────────────────────────┘
+│                                                                                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 
 FT = Fine-Tuned
 ```
 
-</details>
 
-<details>
-<summary><h4>🆚 Why Choose Our Models Over Alternatives?</h4></summary>
 
-| Feature | 🪶 Lite | 🎯 Pro | Base Models | Google Translate |
-|:--------|:------:|:------:|:-----------:|:----------------:|
-| **Persian-Optimized** | ✅ | ✅ | ❌ | ✅ |
-| **Offline Usage** | ✅ | ✅ | ✅ | ❌ |
-| **Privacy-Preserving** | ✅ | ✅ | ✅ | ❌ |
-| **Low Latency** | ✅ | ✅ | ✅ | ❌ |
-| **No API Costs** | ✅ | ✅ | ✅ | ❌ |
-| **Customizable** | ✅ | ✅ | ✅ | ❌ |
-| **Idiomatic Understanding** | ✅ | ✅ | ❌ | Partial |
-| **Edge Deployment** | ✅ | ⚠️ | ✅ | ❌ |
-| **Open Source** | ✅ | ✅ | ✅ | ❌ |
-
-</details>
-
-</details>
-
----
-
-<details>
-<summary><h2>✨ Features</h2></summary>
-
-- 🪶 **Dual Options** — Choose between ultra-lite (0.6B) or balanced (4B) models
-- ⚡ **Fast Inference** — Optimized with Unsloth for 2x faster performance
-- 🎯 **High Accuracy** — Fine-tuned on 300K high-quality sentence pairs
-- 💾 **Low Resource** — Both models run on consumer hardware
-- 📦 **Multiple Formats** — Available in GGUF format for local deployment
-- 🔓 **Open Source** — MIT licensed for maximum flexibility
-- 🔄 **Scalable** — Pick the right model for your resource constraints
-- 🔒 **Privacy** — All processing happens locally, no data sent to cloud
-- 🌐 **Offline** — Works without internet connection
-
-</details>
-
----
-
-<details>
-<summary><h2>🛠️ Installation</h2></summary>
+## 🛠️ Installation
 
 You can use the `inference.py` script from this repository on your local system, Google Colab, or cloud computing services.
 
@@ -214,65 +158,24 @@ You can use the `inference.py` script from this repository on your local system,
 
 ### 🖥️ Local System
 
-**⚠️ Recommended:** Create a virtual environment to avoid dependency conflicts:
-
-```bash
-# Create virtual environment
-python -m venv translator_env
-
-# Activate virtual environment
-# On Windows:
-translator_env\Scripts\activate
-# On Linux/Mac:
-source translator_env/bin/activate
-
-# Clone the repository
-git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
-cd Persian-To-English-Translator
-
-# Install dependencies
-pip install torch transformers accelerate
-pip install unsloth peft
-```
+**Recommended:** Create a virtual environment to avoid dependency conflicts:
 
 ### ☁️ Google Colab
 
 **Note:** Recently, Google Colab has become extremely slow for Iranian users and requires VPN.
 
-```python
-# In a Colab cell
-!git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
-%cd Persian-To-English-Translator
-!pip install torch transformers accelerate unsloth peft
-```
 
 ### 🐳 Docker (Recommended for Cloud/Production)
 
 If you encounter software conflicts on local or cloud environments, use Docker:
 
 ```bash
-# Pull the Unsloth Docker image
-docker pull unsloth/unsloth
-
-# Run with GPU support
-docker run --gpus all -it unsloth/unsloth
-
-# Inside container, clone and setup
-git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
-cd Persian-To-English-Translator
+https://hub.docker.com/r/unsloth/unsloth
 ```
-
-For more information on the Docker image, visit: https://hub.docker.com/r/unsloth/unsloth
-
-</details>
 
 ---
 
-<details>
-<summary><h2>🚀 Quick Start</h2></summary>
-
-<details>
-<summary><h3>Using Transformers</h3></summary>
+## 🚀 Quick Start
 
 ```python
 import re
@@ -315,20 +218,14 @@ print(f"Persian: {persian_text}")
 print(f"English: {translation}")
 ```
 
-</details>
-
-</details>
-
 ---
 
-<details>
-<summary><h2>📚 Dataset</h2></summary>
+## 📚 Dataset
 
 ### Overview
 My models were trained on a highly curated dataset of **300,000 Persian-English sentence pairs**. Instead of relying on massive but noisy datasets, I adopted a "Quality over Quantity" approach, as explored in research on data curation (e.g., [Kreutzer et al., 2018](https://arxiv.org/abs/1805.12282)). I combined filtered web data, high-quality classical translations, and targeted synthetic data to build a robust training set.
 
-<details>
-<summary><h3>Data Composition & Methodology</h3></summary>
+### Data Composition & Methodology
 
 The dataset is constructed from three primary sources:
 
@@ -353,10 +250,7 @@ The dataset is constructed from three primary sources:
     *   **My Solution:** To address these gaps, I generated approximately **50,000 synthetic sentence pairs** via **Back-Translation**.
     *   This data was not random; it was created to specifically cover the linguistic "blind spots" of standard datasets, significantly improving the model's fluency and its ability to handle complex grammatical structures.
 
-</details>
-
-<details>
-<summary><h3>Dataset Quality Comparison</h3></summary>
+### Dataset Quality Comparison
 
 | Dataset | Size | Quality | Composition | Cleaned |
 |---------|------|---------|-------------|---------|
@@ -365,26 +259,20 @@ The dataset is constructed from three primary sources:
 | Mizan (Full) | 1M+ | ⭐⭐⭐⭐ | Literary/Classical | ✅ Yes |
 | OPUS-100 | 1M+ | ⭐⭐⭐ | Generic Multilingual | ❌ No |
 
-</details>
-
 ### Download
 To reproduce my results or use this curated mixture for your own research, you can download the final processed dataset here:
 
 📥 **[Download Dataset](https://huggingface.co/datasets/MahdiMaaref/PersianToEnglishDataset-1M)**
 
-<details>
-<summary><h3>Data Cleaning Pipeline</h3></summary>
+### Data Cleaning Pipeline
 
 ```
 Raw Data → Deduplication → Length Filter → Quality Filter → Final Dataset
    │              │              │              │              │
-  500K+        450K           380K           320K           300K
+  1.3M+        1.2K           800K           310K           310K
 ```
 
-</details>
-
-<details>
-<summary><h3>Persian-Specific Challenges Addressed</h3></summary>
+### Persian-Specific Challenges Addressed
 
 - ✅ Right-to-Left (RTL) text handling
 - ✅ Persian-specific characters and diacritics
@@ -393,39 +281,20 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 - ✅ Mixed Persian-Arabic script
 - ✅ Transliteration of names and places
 
-</details>
-
-</details>
-
 ---
 
-<details>
-<summary><h2>📦 Model Checkpoints</h2></summary>
 
-### 🎯 Lite Model (0.6B)
+## 📦 Model Checkpoints
 
-| Format | Size | Use Case | Download |
-|--------|------|----------|----------|
-| Full Model | ~1.2GB | Training/Fine-tuning | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| GGUF Q4_K_M | ~400MB | Fast CPU Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| GGUF Q8_0 | ~650MB | Balanced Quality/Speed | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| GGUF F16 | ~1.2GB | Maximum Quality | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| Model | Format | Size | Use Case | Download |
+|-------|--------|------|----------|----------|
+| **🪶 Lite (0.6B)** | merged (f16) | ~1.2GB | Training/Fine-tuning/Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| **🎯 Pro (4B)** | tbd | ~8GB | Training/Fine-tuning/Inference | 🚧 *Coming Soon* |
 
-### 🎯 Pro Model (4B)
-
-| Format | Size | Use Case | Download |
-|--------|------|----------|----------|
-| Full Model | ~8GB | Training/Fine-tuning | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| GGUF Q4_K_M | ~2.5GB | Fast CPU Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| GGUF Q8_0 | ~4.5GB | Balanced Quality/Speed | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| GGUF F16 | ~8GB | Maximum Quality | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-
-</details>
-
+> 💡 **Note:** Pro model is currently in development. Stay tuned for updates!
 ---
 
-<details>
-<summary><h2>🤝 Contributing</h2></summary>
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
@@ -435,12 +304,9 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-</details>
-
 ---
 
-<details>
-<summary><h2>📄 License</h2></summary>
+## 📄 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -455,8 +321,6 @@ in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software...
 ```
-
-</details>
 
 ---
 

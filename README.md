@@ -205,7 +205,27 @@ FT = Fine-Tuned
 <details>
 <summary><h2>🛠️ Installation</h2></summary>
 
+You can use the `inference.py` script from this repository on your local system, Google Colab, or cloud computing services.
+
+### 📋 Prerequisites
+
+- Python 3.8 or higher
+- CUDA-compatible GPU (recommended but not required)
+
+### 🖥️ Local System
+
+**⚠️ Recommended:** Create a virtual environment to avoid dependency conflicts:
+
 ```bash
+# Create virtual environment
+python -m venv translator_env
+
+# Activate virtual environment
+# On Windows:
+translator_env\Scripts\activate
+# On Linux/Mac:
+source translator_env/bin/activate
+
 # Clone the repository
 git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
 cd Persian-To-English-Translator
@@ -214,6 +234,35 @@ cd Persian-To-English-Translator
 pip install torch transformers accelerate
 pip install unsloth peft
 ```
+
+### ☁️ Google Colab
+
+**Note:** Recently, Google Colab has become extremely slow for Iranian users and requires VPN.
+
+```python
+# In a Colab cell
+!git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
+%cd Persian-To-English-Translator
+!pip install torch transformers accelerate unsloth peft
+```
+
+### 🐳 Docker (Recommended for Cloud/Production)
+
+If you encounter software conflicts on local or cloud environments, use Docker:
+
+```bash
+# Pull the Unsloth Docker image
+docker pull unsloth/unsloth
+
+# Run with GPU support
+docker run --gpus all -it unsloth/unsloth
+
+# Inside container, clone and setup
+git clone https://github.com/Mahdi-Maaref/Persian-To-English-Translator.git
+cd Persian-To-English-Translator
+```
+
+For more information on the Docker image, visit: https://hub.docker.com/r/unsloth/unsloth
 
 </details>
 
@@ -226,90 +275,44 @@ pip install unsloth peft
 <summary><h3>Using Transformers</h3></summary>
 
 ```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
+import re
+from unsloth import FastLanguageModel
 
-# Choose your model:
-# Lite (0.6B) - Fast & Lightweight
-model_name = "Mahdi-Maaref/Persian-To-English-Translator-Lite"
+model_id = "MahdiMaaref/Persian-To-English-Translator"
 
-# Pro (4B) - Higher Accuracy
-# model_name = "Mahdi-Maaref/Persian-To-English-Translator-Pro"
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_id,
+    max_seq_length=2048,
+    dtype=None,
+    load_in_4bit=True,
+)
+FastLanguageModel.for_inference(model)
 
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)
+# Example translation
+persian_text = "امروز بعد از کار می‌خوام برم کتابخانه و چند تا کتاب خوب پیدا کنم."
 
-# Translate
-persian_text = "سلام، حال شما چطور است؟"
-prompt = f"Translate the following Persian text to English:\n{persian_text}\nEnglish:"
+messages = [
+    {"role": "system", "content": "You are a professional Persian to English translator. Translate accurately. Output ONLY English."},
+    {"role": "user", "content": f"Translate to English:\n{persian_text}"}
+]
+prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(**inputs, max_new_tokens=128)
-translation = tokenizer.decode(outputs[0], skip_special_tokens=True)
+inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+outputs = model.generate(
+    **inputs,
+    max_new_tokens=2048,
+    temperature=0.7,
+    top_p=0.9,
+    do_sample=True,
+)
 
-print(translation)
-```
+input_len = inputs['input_ids'].shape[1]
+new_tokens = outputs[0][input_len:]
+translation = tokenizer.decode(new_tokens, skip_special_tokens=True)
+translation = re.sub(r'<think>.*?</think>', '', translation, flags=re.DOTALL).strip()
 
-</details>
-
-<details>
-<summary><h3>Using GGUF (llama.cpp)</h3></summary>
-
-```bash
-# Download GGUF model (Lite version)
-wget https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Lite-GGUF/resolve/main/model-q4_k_m.gguf
-
-# Or Pro version
-wget https://huggingface.co/Mahdi-Maaref/Persian-To-English-Translator-Pro-GGUF/resolve/main/model-q4_k_m.gguf
-
-# Run with llama.cpp
-./main -m model-q4_k_m.gguf -p "Translate Persian to English: سلام دنیا"
-```
-
-</details>
-
-<details>
-<summary><h3>Model Selection Guide</h3></summary>
-
-```python
-# Use this helper to choose the right model
-def select_model(priority="balanced"):
-    """
-    priority options:
-    - "speed": Use Lite model (0.6B)
-    - "quality": Use Pro model (4B)  
-    - "balanced": Use Lite for simple, Pro for complex text
-    """
-    if priority == "speed":
-        return "Mahdi-Maaref/Persian-To-English-Translator-Lite"
-    elif priority == "quality":
-        return "Mahdi-Maaref/Persian-To-English-Translator-Pro"
-    else:
-        # Implement your logic here
-        pass
-```
-
-</details>
-
-<details>
-<summary><h3>Model Architecture</h3></summary>
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     Persian-To-English-Translator               │
-├────────────────────────────┬────────────────────────────────────┤
-│     🪶 LITE MODEL          │        🎯 PRO MODEL                │
-├────────────────────────────┼────────────────────────────────────┤
-│    Qwen3-0.6B (Base)       │       Qwen3-4B (Base)              │
-│  + LoRA Adapters           │     + LoRA Adapters                │
-│  + Unsloth Optimizations   │     + Unsloth Optimizations        │
-├────────────────────────────┼────────────────────────────────────┤
-│  Trainable: 20.2M (3.28%)  │     Trainable: TBD                 │
-│  Total: 616M params        │     Total: ~4B params              │
-├────────────────────────────┼────────────────────────────────────┤
-│  💨 Speed: ★★★★★           │     💨 Speed: ★★★☆☆                │
-│  🎯 Quality: ★★★★☆         │     🎯 Quality: ★★★★★              │
-│  💾 Size: ★★★★★            │     💾 Size: ★★★★☆                 │
-└────────────────────────────┴────────────────────────────────────┘
+print(f"Persian: {persian_text}")
+print(f"English: {translation}")
 ```
 
 </details>

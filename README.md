@@ -221,8 +221,8 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 
 | Model | Format | Size | Use Case | Download |
 |-------|--------|------|----------|----------|
-| **🪶 Lite (0.6B)** | merged (f16) | ~1.2GB | Training/Fine-tuning/Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
-| **🎯 Pro (4B)** | tbd | ~8GB | Training/Fine-tuning/Inference | 🚧 *Coming Soon* |
+| **🚀 Lite (0.6B)** | merged (f16) | ~1.2GB | Training/Fine-tuning/Inference | [🤗 Download](https://huggingface.co/MahdiMaaref/Persian-To-English-Translator) |
+| **🎯 Pro (4B)** | tbd | tbd | Training/Fine-tuning/Inference | 🚧 *Coming Soon* |
 
 > 💡 **Note:** Pro model is currently in development. Stay tuned for updates!
 
@@ -233,12 +233,11 @@ Raw Data → Deduplication → Length Filter → Quality Filter → Final Datase
 
 🤝 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
+This project is licensed under the **MIT License**
 ```
 MIT License
 
-Copyright (c) 2024 Mahdi Maaref
+Copyright (c) 2025 Mahdi Maaref
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -256,5 +255,11 @@ copies of the Software...
 **Made with ❤️ for the Persian NLP Community**
 
 [![GitHub stars](https://img.shields.io/github/stars/Mahdi-Maaref/Persian-To-English-Translator?style=social)](https://github.com/Mahdi-Maaref/Persian-To-English-Translator)
+
+
+---
+
+### Find me on LinkedIn  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/mahdi-maarefdost/)
 
 </div>

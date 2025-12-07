@@ -80,7 +80,7 @@ COMET: Neural metric trained on human judgments, best predictor of quality (high
 ## 📝 Translation Examples
 
 <div align="center">
-  <img src="images/resualts.png" alt="persian to english translator" width="90%"/>
+  <img src="images/results.png" alt="persian to english translator" width="90%"/>
   <br>
   <em>Figure: Nava Lite VS Qwen3 Model</em>
 </div>
